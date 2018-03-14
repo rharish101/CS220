@@ -1,0 +1,567 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml LCD_top.twx LCD_top.ncd -o LCD_top.twr LCD_top.pcf -ucf
+LCD_top.ucf
+
+Design file:              LCD_top.ncd
+Physical constraint file: LCD_top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1220 paths analyzed, 130 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.859ns.
+--------------------------------------------------------------------------------
+
+Paths for end point driverm/state_q_0 (SLICE_X52Y32.CE), 25 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     11.141ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_4 (FF)
+  Destination:          driverm/state_q_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.836ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.023ns (0.086 - 0.109)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_4 to driverm/state_q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y74.XQ      Tcko                  0.591   driverm/addr_q<4>
+                                                       driverm/addr_q_4
+    SLICE_X53Y77.F1      net (fanout=2)        1.101   driverm/addr_q<4>
+    SLICE_X53Y77.COUT    Topcyf                1.162   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<0>
+                                                       driverm/rst_wg_cy<0>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X52Y32.CE      net (fanout=5)        0.660   driverm/state_q_not0001
+    SLICE_X52Y32.CLK     Tceck                 0.555   driverm/state_q<0>
+                                                       driverm/state_q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.836ns (3.303ns logic, 5.533ns route)
+                                                       (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.436ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_11 (FF)
+  Destination:          driverm/state_q_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.543ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.021ns (0.086 - 0.107)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_11 to driverm/state_q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y77.YQ      Tcko                  0.587   driverm/addr_q<10>
+                                                       driverm/addr_q_11
+    SLICE_X53Y77.G4      net (fanout=2)        0.973   driverm/addr_q<11>
+    SLICE_X53Y77.COUT    Topcyg                1.001   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<1>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X52Y32.CE      net (fanout=5)        0.660   driverm/state_q_not0001
+    SLICE_X52Y32.CLK     Tceck                 0.555   driverm/state_q<0>
+                                                       driverm/state_q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.543ns (3.138ns logic, 5.405ns route)
+                                                       (36.7% logic, 63.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.439ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_6 (FF)
+  Destination:          driverm/state_q_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.538ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.023ns (0.086 - 0.109)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_6 to driverm/state_q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y75.XQ      Tcko                  0.591   driverm/addr_q<6>
+                                                       driverm/addr_q_6
+    SLICE_X53Y77.F2      net (fanout=2)        0.803   driverm/addr_q<6>
+    SLICE_X53Y77.COUT    Topcyf                1.162   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<0>
+                                                       driverm/rst_wg_cy<0>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X52Y32.CE      net (fanout=5)        0.660   driverm/state_q_not0001
+    SLICE_X52Y32.CLK     Tceck                 0.555   driverm/state_q<0>
+                                                       driverm/state_q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      8.538ns (3.303ns logic, 5.235ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point driverm/state_q_4 (SLICE_X53Y33.CE), 25 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     11.141ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_4 (FF)
+  Destination:          driverm/state_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.836ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.023ns (0.086 - 0.109)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_4 to driverm/state_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y74.XQ      Tcko                  0.591   driverm/addr_q<4>
+                                                       driverm/addr_q_4
+    SLICE_X53Y77.F1      net (fanout=2)        1.101   driverm/addr_q<4>
+    SLICE_X53Y77.COUT    Topcyf                1.162   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<0>
+                                                       driverm/rst_wg_cy<0>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X53Y33.CE      net (fanout=5)        0.660   driverm/state_q_not0001
+    SLICE_X53Y33.CLK     Tceck                 0.555   driverm/state_q<4>
+                                                       driverm/state_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                      8.836ns (3.303ns logic, 5.533ns route)
+                                                       (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.436ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_11 (FF)
+  Destination:          driverm/state_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.543ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.021ns (0.086 - 0.107)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_11 to driverm/state_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y77.YQ      Tcko                  0.587   driverm/addr_q<10>
+                                                       driverm/addr_q_11
+    SLICE_X53Y77.G4      net (fanout=2)        0.973   driverm/addr_q<11>
+    SLICE_X53Y77.COUT    Topcyg                1.001   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<1>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X53Y33.CE      net (fanout=5)        0.660   driverm/state_q_not0001
+    SLICE_X53Y33.CLK     Tceck                 0.555   driverm/state_q<4>
+                                                       driverm/state_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                      8.543ns (3.138ns logic, 5.405ns route)
+                                                       (36.7% logic, 63.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.439ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_6 (FF)
+  Destination:          driverm/state_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.538ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.023ns (0.086 - 0.109)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_6 to driverm/state_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y75.XQ      Tcko                  0.591   driverm/addr_q<6>
+                                                       driverm/addr_q_6
+    SLICE_X53Y77.F2      net (fanout=2)        0.803   driverm/addr_q<6>
+    SLICE_X53Y77.COUT    Topcyf                1.162   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<0>
+                                                       driverm/rst_wg_cy<0>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X53Y33.CE      net (fanout=5)        0.660   driverm/state_q_not0001
+    SLICE_X53Y33.CLK     Tceck                 0.555   driverm/state_q<4>
+                                                       driverm/state_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                      8.538ns (3.303ns logic, 5.235ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point driverm/state_q_5 (SLICE_X52Y40.CE), 25 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     11.166ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_4 (FF)
+  Destination:          driverm/state_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.822ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.012ns (0.097 - 0.109)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_4 to driverm/state_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y74.XQ      Tcko                  0.591   driverm/addr_q<4>
+                                                       driverm/addr_q_4
+    SLICE_X53Y77.F1      net (fanout=2)        1.101   driverm/addr_q<4>
+    SLICE_X53Y77.COUT    Topcyf                1.162   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<0>
+                                                       driverm/rst_wg_cy<0>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X52Y40.CE      net (fanout=5)        0.646   driverm/state_q_not0001
+    SLICE_X52Y40.CLK     Tceck                 0.555   driverm/state_q<5>
+                                                       driverm/state_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                      8.822ns (3.303ns logic, 5.519ns route)
+                                                       (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.461ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_11 (FF)
+  Destination:          driverm/state_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.529ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.010ns (0.097 - 0.107)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_11 to driverm/state_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y77.YQ      Tcko                  0.587   driverm/addr_q<10>
+                                                       driverm/addr_q_11
+    SLICE_X53Y77.G4      net (fanout=2)        0.973   driverm/addr_q<11>
+    SLICE_X53Y77.COUT    Topcyg                1.001   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<1>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X52Y40.CE      net (fanout=5)        0.646   driverm/state_q_not0001
+    SLICE_X52Y40.CLK     Tceck                 0.555   driverm/state_q<5>
+                                                       driverm/state_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                      8.529ns (3.138ns logic, 5.391ns route)
+                                                       (36.8% logic, 63.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.464ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               driverm/addr_q_6 (FF)
+  Destination:          driverm/state_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      8.524ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.012ns (0.097 - 0.109)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: driverm/addr_q_6 to driverm/state_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y75.XQ      Tcko                  0.591   driverm/addr_q<6>
+                                                       driverm/addr_q_6
+    SLICE_X53Y77.F2      net (fanout=2)        0.803   driverm/addr_q<6>
+    SLICE_X53Y77.COUT    Topcyf                1.162   driverm/rst_wg_cy<1>
+                                                       driverm/rst_wg_lut<0>
+                                                       driverm/rst_wg_cy<0>
+                                                       driverm/rst_wg_cy<1>
+    SLICE_X53Y78.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<1>
+    SLICE_X53Y78.COUT    Tbyp                  0.118   driverm/rst_wg_cy<3>
+                                                       driverm/rst_wg_cy<2>
+                                                       driverm/rst_wg_cy<3>
+    SLICE_X53Y79.CIN     net (fanout=1)        0.000   driverm/rst_wg_cy<3>
+    SLICE_X53Y79.COUT    Tbyp                  0.118   driverm/rst
+                                                       driverm/rst_wg_cy<4>
+                                                       driverm/rst_wg_cy<5>
+    SLICE_X54Y45.F1      net (fanout=14)       3.772   driverm/rst
+    SLICE_X54Y45.X       Tilo                  0.759   driverm/counter_q<0>
+                                                       driverm/state_q_not00011
+    SLICE_X52Y40.CE      net (fanout=5)        0.646   driverm/state_q_not0001
+    SLICE_X52Y40.CLK     Tceck                 0.555   driverm/state_q<5>
+                                                       driverm/state_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                      8.524ns (3.303ns logic, 5.221ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point driverm/counter_q_0 (SLICE_X54Y45.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.354ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               driverm/counter_q_0 (FF)
+  Destination:          driverm/counter_q_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.354ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: driverm/counter_q_0 to driverm/counter_q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y45.XQ      Tcko                  0.474   driverm/counter_q<0>
+                                                       driverm/counter_q_0
+    SLICE_X54Y45.BX      net (fanout=5)        0.746   driverm/counter_q<0>
+    SLICE_X54Y45.CLK     Tckdi       (-Th)    -0.134   driverm/counter_q<0>
+                                                       driverm/counter_q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.354ns (0.608ns logic, 0.746ns route)
+                                                       (44.9% logic, 55.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point driverm/state_q_2 (SLICE_X53Y41.G4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.366ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               driverm/state_q_2 (FF)
+  Destination:          driverm/state_q_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.366ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: driverm/state_q_2 to driverm/state_q_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y41.YQ      Tcko                  0.470   driverm/state_q<3>
+                                                       driverm/state_q_2
+    SLICE_X53Y41.G4      net (fanout=21)       0.380   driverm/state_q<2>
+    SLICE_X53Y41.CLK     Tckg        (-Th)    -0.516   driverm/state_q<3>
+                                                       driverm/state_d<2>1
+                                                       driverm/state_q_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.366ns (0.986ns logic, 0.380ns route)
+                                                       (72.2% logic, 27.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point driverm/state_q_6 (SLICE_X53Y40.G3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.485ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               driverm/state_q_6 (FF)
+  Destination:          driverm/state_q_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.485ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: driverm/state_q_6 to driverm/state_q_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y40.YQ      Tcko                  0.470   driverm/state_q<6>
+                                                       driverm/state_q_6
+    SLICE_X53Y40.G3      net (fanout=7)        0.499   driverm/state_q<6>
+    SLICE_X53Y40.CLK     Tckg        (-Th)    -0.516   driverm/state_q<6>
+                                                       driverm/state_d<6>1
+                                                       driverm/state_q_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.485ns (0.986ns logic, 0.499ns route)
+                                                       (66.4% logic, 33.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: driverm/data_out<0>/CLK
+  Logical resource: driverm/data_out_0/CK
+  Location pin: SLICE_X52Y31.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: driverm/data_out<0>/CLK
+  Logical resource: driverm/data_out_0/CK
+  Location pin: SLICE_X52Y31.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.652ns (605.327MHz) (Tcp)
+  Physical resource: driverm/data_out<0>/CLK
+  Logical resource: driverm/data_out_0/CK
+  Location pin: SLICE_X52Y31.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.859|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1220 paths, 0 nets, and 284 connections
+
+Design statistics:
+   Minimum period:   8.859ns{1}   (Maximum frequency: 112.880MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Mar  7 15:59:45 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 359 MB
+
+
+

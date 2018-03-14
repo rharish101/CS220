@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab1_2/full_adder_schematic/full_adder_sch.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab1_2/full_adder_schematic/full_adder_sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc full_adder_sch.ucf -p xc3s500e-fg320-4 full_adder_sch.ngc full_adder_sch.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o full_adder_sch_map.ncd full_adder_sch.ngd full_adder_sch.pcf 
+par -w -intstyle ise -ol high -t 1 full_adder_sch_map.ncd full_adder_sch.ncd full_adder_sch.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml full_adder_sch.twx full_adder_sch.ncd -o full_adder_sch.twr full_adder_sch.pcf -ucf full_adder_sch.ucf 
+bitgen -intstyle ise -f full_adder_sch.ut full_adder_sch.ncd 

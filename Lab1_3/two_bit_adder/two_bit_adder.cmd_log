@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/two_bit_adder.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/two_bit_adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc two_bit_adder.ucf -p xc3s500e-fg320-4 two_bit_adder.ngc two_bit_adder.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o two_bit_adder_map.ncd two_bit_adder.ngd two_bit_adder.pcf 
+par -w -intstyle ise -ol high -t 1 two_bit_adder_map.ncd two_bit_adder.ncd two_bit_adder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml two_bit_adder.twx two_bit_adder.ncd -o two_bit_adder.twr two_bit_adder.pcf -ucf two_bit_adder.ucf 
+bitgen -intstyle ise -f two_bit_adder.ut two_bit_adder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc two_bit_adder.ucf -p xc3s500e-fg320-4 two_bit_adder.ngc two_bit_adder.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o two_bit_adder_map.ncd two_bit_adder.ngd two_bit_adder.pcf 
+par -w -intstyle ise -ol high -t 1 two_bit_adder_map.ncd two_bit_adder.ncd two_bit_adder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml two_bit_adder.twx two_bit_adder.ncd -o two_bit_adder.twr two_bit_adder.pcf -ucf two_bit_adder.ucf 
+bitgen -intstyle ise -f two_bit_adder.ut two_bit_adder.ncd 

@@ -1,0 +1,29 @@
+Command line:
+   blinker_top_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  39761
+
+Wed Feb  7 14:42:24 2018
+
+
+ Elaboration Time: 0.14 sec
+
+ Current Memory Usage: 230.076 Meg
+
+ Total Signals          : 15
+ Total Nets             : 15
+ Total Signal Drivers   : 7
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 155
+Total Line Count : 290
+
+ Total Simulation Time: 0.18 sec
+
+ Current Memory Usage: 305.566 Meg
+
+Wed Feb  7 14:44:46 2018
+

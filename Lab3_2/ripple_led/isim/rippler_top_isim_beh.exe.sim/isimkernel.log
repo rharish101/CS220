@@ -1,0 +1,29 @@
+Command line:
+   rippler_top_isim_beh.exe
+     -simmode  gui
+     -simrunnum  2
+     -socket  49772
+
+Wed Feb  7 15:12:40 2018
+
+
+ Elaboration Time: 0.13 sec
+
+ Current Memory Usage: 230.089 Meg
+
+ Total Signals          : 22
+ Total Nets             : 22
+ Total Signal Drivers   : 14
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 19
+ Total Traceable Variables  : 28
+ Total Scalar Nets and Variables : 137
+Total Line Count : 474
+
+ Total Simulation Time: 0.17 sec
+
+ Current Memory Usage: 305.578 Meg
+
+Wed Feb  7 15:13:01 2018
+

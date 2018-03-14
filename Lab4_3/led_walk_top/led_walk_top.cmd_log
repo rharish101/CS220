@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/media/rharish/Harish/CS220A_Labs/Lab4_3/led_walk_top/led_walk_top.xst" -ofn "/media/rharish/Harish/CS220A_Labs/Lab4_3/led_walk_top/led_walk_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc led_walk_top.ucf -p xc3s500e-fg320-4 led_walk_top.ngc led_walk_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o led_walk_top_map.ncd led_walk_top.ngd led_walk_top.pcf 
+par -w -intstyle ise -ol high -t 1 led_walk_top_map.ncd led_walk_top.ncd led_walk_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml led_walk_top.twx led_walk_top.ncd -o led_walk_top.twr led_walk_top.pcf -ucf led_walk_top.ucf 
+bitgen -intstyle ise -f led_walk_top.ut led_walk_top.ncd 

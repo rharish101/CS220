@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Jan 17 16:49:59 2018
+# Process ID: 30864
+# Log file: /media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/planAhead_run_2/planAhead.log
+# Journal file: /media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property package_pin "" [get_ports [list  {x[0]}]]
+startgroup
+set_property package_pin L14 [get_ports {x[1]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {x[0]}]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports {y[1]}]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports {y[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {y[0]}]]
+startgroup
+set_property package_pin N17 [get_ports {y[1]}]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports {y[0]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {z[1]}]
+endgroup
+set_property package_pin "" [get_ports [list  {z[1]}]]
+startgroup
+set_property package_pin F12 [get_ports {z[0]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {z[1]}]
+endgroup
+save_constraints

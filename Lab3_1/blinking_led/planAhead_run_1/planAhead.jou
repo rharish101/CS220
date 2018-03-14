@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Feb  7 14:45:04 2018
+# Process ID: 26701
+# Log file: /media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led/planAhead_run_1/planAhead.log
+# Journal file: /media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+refresh_design
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+startgroup
+set_property package_pin F12 [get_ports led0]
+endgroup
+set_property iostandard LVTTL [get_ports [list led0]]
+set_property drive 8 [get_ports [list led0]]
+save_constraints

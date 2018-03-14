@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Feb 14 15:56:44 2018
+# Process ID: 25331
+# Log file: /media/rharish/822A-B6CA/CS220Labs/Lab4_2/seven_bit_add_sub/planAhead_run_1/planAhead.log
+# Journal file: /media/rharish/822A-B6CA/CS220Labs/Lab4_2/seven_bit_add_sub/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /media/rharish/822A-B6CA/CS220Labs/Lab4_2/seven_bit_add_sub/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property iostandard LVTTL [get_ports [list {slide[3]} {slide[2]} {slide[1]} {slide[0]}]]
+set_property pulltype PULLUP [get_ports [list {slide[3]} {slide[2]} {slide[1]} {slide[0]}]]
+startgroup
+set_property package_pin L13 [get_ports {slide[0]}]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports {slide[1]}]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports {slide[2]}]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports {slide[3]}]
+endgroup
+set_property iostandard LVTTL [get_ports [list {sum[6]} {sum[5]} {sum[4]} {sum[3]} {sum[2]} {sum[1]} {sum[0]}]]
+set_property drive 8 [get_ports [list {sum[6]} {sum[5]} {sum[4]} {sum[3]} {sum[2]} {sum[1]} {sum[0]}]]
+startgroup
+set_property package_pin F12 [get_ports {sum[0]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {sum[1]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {sum[2]}]
+endgroup
+set_property package_pin "" [get_ports [list  {sum[4]}]]
+startgroup
+set_property package_pin F11 [get_ports {sum[3]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {sum[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {sum[5]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {sum[6]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports carry]
+endgroup
+set_property iostandard LVTTL [get_ports [list carry]]
+set_property drive 8 [get_ports [list carry]]
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+startgroup
+set_property package_pin K18 [get_ports rot_a]
+endgroup
+startgroup
+set_property package_pin G18 [get_ports rot_b]
+endgroup
+set_property iostandard LVTTL [get_ports [list rot_a]]
+set_property iostandard LVTTL [get_ports [list rot_b]]
+set_property pulltype PULLUP [get_ports [list rot_b]]
+set_property pulltype PULLUP [get_ports [list rot_a]]
+save_constraints

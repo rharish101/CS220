@@ -1,0 +1,3 @@
+verilog work "rotator.v"
+verilog work "rotation_info.v"
+verilog work "rotary_encoder.v"

@@ -1,0 +1,435 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> 
+Reading design: seven_bit_add_sub.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "seven_bit_add_sub.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "seven_bit_add_sub"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : seven_bit_add_sub
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "full_adder.v" in library work
+Compiling verilog file "rotation_info.v" in library work
+Module <full_adder> compiled
+Compiling verilog file "input_taker.v" in library work
+Module <rotation_info> compiled
+Compiling verilog file "seven_bit_add_sub.v" in library work
+Module <input_taker> compiled
+Module <seven_bit_add_sub> compiled
+No errors in compilation
+Analysis of file <"seven_bit_add_sub.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <seven_bit_add_sub> in library <work>.
+
+Analyzing hierarchy for module <rotation_info> in library <work>.
+
+Analyzing hierarchy for module <input_taker> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <seven_bit_add_sub>.
+Module <seven_bit_add_sub> is correct for synthesis.
+ 
+Analyzing module <rotation_info> in library <work>.
+Module <rotation_info> is correct for synthesis.
+ 
+Analyzing module <input_taker> in library <work>.
+Module <input_taker> is correct for synthesis.
+ 
+Analyzing module <full_adder> in library <work>.
+Module <full_adder> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <rotation_info>.
+    Related source file is "rotation_info.v".
+    Found 1-bit register for signal <rot_dir>.
+    Found 1-bit register for signal <rot_event>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <rotation_info> synthesized.
+
+
+Synthesizing Unit <full_adder>.
+    Related source file is "full_adder.v".
+    Found 1-bit xor3 for signal <sum>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <input_taker>.
+    Related source file is "input_taker.v".
+    Found 1-bit xor2 for signal <$xor0000> created at line 71.
+    Found 1-bit xor2 for signal <$xor0001> created at line 72.
+    Found 1-bit xor2 for signal <$xor0002> created at line 73.
+    Found 1-bit xor2 for signal <$xor0003> created at line 74.
+    Found 1-bit xor2 for signal <$xor0004> created at line 75.
+    Found 1-bit xor2 for signal <$xor0005> created at line 76.
+    Found 1-bit xor2 for signal <$xor0006> created at line 77.
+    Found 7-bit register for signal <a>.
+    Found 7-bit register for signal <b>.
+    Found 1-bit xor2 for signal <carry$xor0000> created at line 78.
+    Found 1-bit register for signal <opcode>.
+    Found 1-bit register for signal <prev_rot_event>.
+    Found 3-bit up counter for signal <rot_steps>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  16 D-type flip-flop(s).
+Unit <input_taker> synthesized.
+
+
+Synthesizing Unit <seven_bit_add_sub>.
+    Related source file is "seven_bit_add_sub.v".
+Unit <seven_bit_add_sub> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 18
+ 1-bit register                                        : 18
+# Xors                                                 : 15
+ 1-bit xor2                                            : 8
+ 1-bit xor3                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+# Xors                                                 : 15
+ 1-bit xor2                                            : 8
+ 1-bit xor3                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <seven_bit_add_sub> ...
+
+Optimizing unit <input_taker> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block seven_bit_add_sub, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : seven_bit_add_sub.ngr
+Top Level Output File Name         : seven_bit_add_sub
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 30
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 7
+#      LUT3                        : 3
+#      LUT3_D                      : 1
+#      LUT4                        : 17
+# FlipFlops/Latches                : 21
+#      FD                          : 1
+#      FDE                         : 16
+#      FDRE                        : 3
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 6
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       16  out of   4656     0%  
+ Number of Slice Flip Flops:             21  out of   9312     0%  
+ Number of 4 input LUTs:                 29  out of   9312     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 21    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.382ns (Maximum Frequency: 228.206MHz)
+   Minimum input arrival time before clock: 4.015ns
+   Maximum output required time after clock: 13.054ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.382ns (frequency: 228.206MHz)
+  Total number of paths / destination ports: 110 / 25
+-------------------------------------------------------------------------
+Delay:               4.382ns (Levels of Logic = 2)
+  Source:            uut2/rot_steps_2 (FF)
+  Destination:       uut2/a_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: uut2/rot_steps_2 to uut2/a_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.591   0.706  uut2/rot_steps_2 (uut2/rot_steps_2)
+     LUT3_D:I0->O          3   0.704   0.535  uut2/b_6_not00011_SW0 (N8)
+     LUT4:I3->O            4   0.704   0.587  uut2/a_3_not00011 (uut2/a_3_not0001)
+     FDE:CE                    0.555          uut2/a_3
+    ----------------------------------------
+    Total                      4.382ns (2.554ns logic, 1.828ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 23 / 19
+-------------------------------------------------------------------------
+Offset:              4.015ns (Levels of Logic = 2)
+  Source:            rot_a (PAD)
+  Destination:       uut1/rot_event (FF)
+  Destination Clock: clk rising
+
+  Data Path: rot_a to uut1/rot_event
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.762  rot_a_IBUF (rot_a_IBUF)
+     LUT2:I0->O            1   0.704   0.420  uut1/rot_event_and00001 (uut1/rot_event_and0000)
+     FDSE:S                    0.911          uut1/rot_event
+    ----------------------------------------
+    Total                      4.015ns (2.833ns logic, 1.182ns route)
+                                       (70.6% logic, 29.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 104 / 8
+-------------------------------------------------------------------------
+Offset:              13.054ns (Levels of Logic = 8)
+  Source:            uut2/opcode (FF)
+  Destination:       carry (PAD)
+  Source Clock:      clk rising
+
+  Data Path: uut2/opcode to carry
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.591   1.062  uut2/opcode (uut2/opcode)
+     LUT3:I1->O            2   0.704   0.451  uut2/uut0/cout1 (uut2/c_int<0>)
+     LUT4:I3->O            2   0.704   0.451  uut2/uut1/cout1 (uut2/c_int<1>)
+     LUT4:I3->O            2   0.704   0.451  uut2/uut2/cout1 (uut2/c_int<2>)
+     LUT4:I3->O            2   0.704   0.451  uut2/uut3/cout1 (uut2/c_int<3>)
+     LUT4:I3->O            2   0.704   0.451  uut2/uut4/cout1 (uut2/c_int<4>)
+     LUT4:I3->O            2   0.704   0.526  uut2/uut5/cout1 (uut2/c_int<5>)
+     LUT4:I1->O            1   0.704   0.420  uut2/carry1 (carry_OBUF)
+     OBUF:I->O                 3.272          carry_OBUF (carry)
+    ----------------------------------------
+    Total                     13.054ns (8.791ns logic, 4.263ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.12 secs
+ 
+--> 
+
+
+Total memory usage is 520152 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

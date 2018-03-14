@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/media/rharish/Harish/CS220A_Labs/Lab4_3/led_walk_top/led_walk_top.ncd
+OUTFILE=/media/rharish/Harish/CS220A_Labs/Lab4_3/led_walk_top/led_walk_top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/media/rharish/Harish/CS220A_Labs/Lab4_3/led_walk_top
+LICENSE=WebPack
+USER_INFO=211450758_0_0_676

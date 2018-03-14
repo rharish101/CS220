@@ -1,0 +1,4 @@
+verilog work "full_adder.v"
+verilog work "five_bit_adder.v"
+verilog work "led_walk.v"
+verilog work "led_walk_top.v"

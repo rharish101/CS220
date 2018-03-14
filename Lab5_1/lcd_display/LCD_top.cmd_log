@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/media/rharish/Harish/CS220A_Labs/Lab5_1/lcd_display/LCD_top.xst" -ofn "/media/rharish/Harish/CS220A_Labs/Lab5_1/lcd_display/LCD_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LCD_top.ucf -p xc3s500e-fg320-4 LCD_top.ngc LCD_top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o LCD_top_map.ncd LCD_top.ngd LCD_top.pcf 
+par -w -intstyle ise -ol high -t 1 LCD_top_map.ncd LCD_top.ncd LCD_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LCD_top.twx LCD_top.ncd -o LCD_top.twr LCD_top.pcf -ucf LCD_top.ucf 
+bitgen -intstyle ise -f LCD_top.ut LCD_top.ncd 

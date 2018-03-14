@@ -1,0 +1,72 @@
+
+# PlanAhead Generated IO constraints 
+
+NET "slide[3]" IOSTANDARD = LVTTL;
+NET "slide[2]" IOSTANDARD = LVTTL;
+NET "slide[1]" IOSTANDARD = LVTTL;
+NET "slide[0]" IOSTANDARD = LVTTL;
+NET "slide[3]" PULLUP;
+NET "slide[2]" PULLUP;
+NET "slide[1]" PULLUP;
+NET "slide[0]" PULLUP;
+
+# PlanAhead Generated physical constraints 
+
+NET "slide[0]" LOC = L13;
+NET "slide[1]" LOC = L14;
+NET "slide[2]" LOC = H18;
+NET "slide[3]" LOC = N17;
+
+# PlanAhead Generated IO constraints 
+
+NET "sum[6]" IOSTANDARD = LVTTL;
+NET "sum[5]" IOSTANDARD = LVTTL;
+NET "sum[4]" IOSTANDARD = LVTTL;
+NET "sum[3]" IOSTANDARD = LVTTL;
+NET "sum[2]" IOSTANDARD = LVTTL;
+NET "sum[1]" IOSTANDARD = LVTTL;
+NET "sum[0]" IOSTANDARD = LVTTL;
+NET "sum[6]" DRIVE = 8;
+NET "sum[5]" DRIVE = 8;
+NET "sum[4]" DRIVE = 8;
+NET "sum[3]" DRIVE = 8;
+NET "sum[2]" DRIVE = 8;
+NET "sum[1]" DRIVE = 8;
+NET "sum[0]" DRIVE = 8;
+
+# PlanAhead Generated physical constraints 
+
+NET "sum[0]" LOC = F12;
+NET "sum[1]" LOC = E12;
+NET "sum[2]" LOC = E11;
+NET "sum[3]" LOC = F11;
+NET "sum[4]" LOC = C11;
+NET "sum[5]" LOC = D11;
+NET "sum[6]" LOC = E9;
+NET "carry" LOC = F9;
+
+# PlanAhead Generated IO constraints 
+
+NET "carry" IOSTANDARD = LVTTL;
+NET "carry" DRIVE = 8;
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = C9;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "clk" PERIOD = 20.0ns HIGH 50%;
+
+# PlanAhead Generated physical constraints 
+
+NET "rot_a" LOC = K18;
+NET "rot_b" LOC = G18;
+
+# PlanAhead Generated IO constraints 
+
+NET "rot_a" IOSTANDARD = LVTTL;
+NET "rot_b" IOSTANDARD = LVTTL;
+NET "rot_b" PULLUP;
+NET "rot_a" PULLUP;

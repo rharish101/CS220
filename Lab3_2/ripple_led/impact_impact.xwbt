@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/media/raditya/822A-B6CA/CS220Labs/Lab3_2/ripple_led/impact.xsl
+OUTFILE=/media/raditya/822A-B6CA/CS220Labs/Lab3_2/ripple_led/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/media/raditya/822A-B6CA/CS220Labs/Lab3_2/ripple_led
+LICENSE=iMPACT
+USER_INFO=iMPACT

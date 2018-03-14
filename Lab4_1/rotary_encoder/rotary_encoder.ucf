@@ -1,0 +1,48 @@
+
+# PlanAhead Generated IO constraints 
+
+NET "leds[7]" DRIVE = 8;
+NET "leds[6]" DRIVE = 8;
+NET "leds[5]" DRIVE = 8;
+NET "leds[4]" DRIVE = 8;
+NET "leds[3]" DRIVE = 8;
+NET "leds[2]" DRIVE = 8;
+NET "leds[1]" DRIVE = 8;
+NET "leds[0]" DRIVE = 8;
+NET "leds[7]" IOSTANDARD = LVTTL;
+NET "leds[6]" IOSTANDARD = LVTTL;
+NET "leds[5]" IOSTANDARD = LVTTL;
+NET "leds[4]" IOSTANDARD = LVTTL;
+NET "leds[3]" IOSTANDARD = LVTTL;
+NET "leds[2]" IOSTANDARD = LVTTL;
+NET "leds[1]" IOSTANDARD = LVTTL;
+NET "leds[0]" IOSTANDARD = LVTTL;
+
+# PlanAhead Generated physical constraints 
+
+NET "leds[0]" LOC = F12;
+NET "leds[1]" LOC = E12;
+NET "leds[2]" LOC = E11;
+NET "leds[3]" LOC = F11;
+NET "leds[4]" LOC = C11;
+NET "leds[5]" LOC = D11;
+NET "leds[6]" LOC = E9;
+NET "leds[7]" LOC = F9;
+NET "clk" LOC = C9;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "clk" PERIOD = 20.0ns HIGH 50%;
+
+# PlanAhead Generated physical constraints 
+
+NET "rot_a" LOC = K18;
+NET "rot_b" LOC = G18;
+
+# PlanAhead Generated IO constraints 
+
+NET "rot_a" IOSTANDARD = LVTTL;
+NET "rot_b" IOSTANDARD = LVTTL;
+NET "rot_a" PULLUP;
+NET "rot_b" PULLUP;

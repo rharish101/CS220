@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab4_2/seven_bit_add_sub/input_taker.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab4_2/seven_bit_add_sub/input_taker.syr" 

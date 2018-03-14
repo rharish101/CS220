@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/media/rharish/822A-B6CA/CS220Labs/Lab2_3/five_four_bit_adder/impact.xsl
+OUTFILE=/media/rharish/822A-B6CA/CS220Labs/Lab2_3/five_four_bit_adder/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/media/rharish/822A-B6CA/CS220Labs/Lab2_3/five_four_bit_adder
+LICENSE=iMPACT
+USER_INFO=iMPACT

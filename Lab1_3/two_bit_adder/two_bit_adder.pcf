@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jan 17 16:54:34 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "carry" LOCATE = SITE "E11" LEVEL 1;
+COMP "x<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "x<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "y<0>" LOCATE = SITE "H18" LEVEL 1;
+COMP "y<1>" LOCATE = SITE "N17" LEVEL 1;
+COMP "z<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "z<1>" LOCATE = SITE "E12" LEVEL 1;
+SCHEMATIC END;
+

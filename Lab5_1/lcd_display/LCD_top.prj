@@ -1,0 +1,3 @@
+verilog work "LCD_base_driver.v"
+verilog work "LCD_driver.v"
+verilog work "LCD_top.v"

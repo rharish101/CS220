@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/media/rharish/Harish/CS220A_Labs/Lab5_1/lcd_display/simulation_isim_beh.exe" -prj "/media/rharish/Harish/CS220A_Labs/Lab5_1/lcd_display/simulation_beh.prj" "work.simulation" "work.glbl" 

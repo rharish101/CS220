@@ -1,0 +1,29 @@
+Command line:
+   seven_bit_adder_top_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50632
+
+Wed Jan 31 14:25:37 2018
+
+
+ Elaboration Time: 0.13 sec
+
+ Current Memory Usage: 230.068 Meg
+
+ Total Signals          : 55
+ Total Nets             : 42
+ Total Signal Drivers   : 22
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 25
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 136
+Total Line Count : 40
+
+ Total Simulation Time: 0.17 sec
+
+ Current Memory Usage: 305.558 Meg
+
+Wed Jan 31 14:27:05 2018
+

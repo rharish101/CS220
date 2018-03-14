@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/media/rharish/822A-B6CA/CS220Labs/Lab2_1/seven_bit_adder/seven_bit_adder_top_isim_beh.exe" -prj "/media/rharish/822A-B6CA/CS220Labs/Lab2_1/seven_bit_adder/seven_bit_adder_top_beh.prj" "work.seven_bit_adder_top" "work.glbl" 

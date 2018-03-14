@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/media/rharish/822A-B6CA/CS220Labs/Lab2_2/eight_bit_comparator/eight_bit_comparator.ncd
+OUTFILE=/media/rharish/822A-B6CA/CS220Labs/Lab2_2/eight_bit_comparator/eight_bit_comparator.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/media/rharish/822A-B6CA/CS220Labs/Lab2_2/eight_bit_comparator
+LICENSE=WebPack
+USER_INFO=211450758_0_0_676

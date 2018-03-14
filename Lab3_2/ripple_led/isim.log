@@ -1,0 +1,22 @@
+ISim log file
+Running: /media/raditya/822A-B6CA/CS220Labs/Lab3_2/ripple_led/rippler_top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/raditya/822A-B6CA/CS220Labs/Lab3_2/ripple_led/rippler_top_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim2.wdb.
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+time=                   0: clk=0, led0=1, led1=0, led2=0, led3=0, led4=0, led5=0, led6=0, led7=0
+Finished circuit initialization process.
+time=                  45: clk=1, led0=0, led1=1, led2=0, led3=0, led4=0, led5=0, led6=0, led7=0
+time=                 395: clk=1, led0=1, led1=0, led2=0, led3=0, led4=0, led5=0, led6=0, led7=0
+time=                 445: clk=1, led0=0, led1=1, led2=0, led3=0, led4=0, led5=0, led6=0, led7=0
+time=                 795: clk=1, led0=1, led1=0, led2=0, led3=0, led4=0, led5=0, led6=0, led7=0
+time=                 845: clk=1, led0=0, led1=1, led2=0, led3=0, led4=0, led5=0, led6=0, led7=0
+# exit 0
+# exit 0

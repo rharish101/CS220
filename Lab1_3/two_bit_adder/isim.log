@@ -1,0 +1,27 @@
+ISim log file
+Running: /media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/two_bit_adder_top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/two_bit_adder_top_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+time=                   0: 00 + 00 = 00, carry = 0
+
+Finished circuit initialization process.
+time=                   5: 01 + 00 = 01, carry = 0
+
+time=                  10: 01 + 10 = 11, carry = 0
+
+time=                  15: 11 + 10 = 01, carry = 1
+
+time=                  20: 11 + 11 = 00, carry = 1
+
+time=                  20: 11 + 11 = 10, carry = 1
+
+Stopped at time : 25 ns : File "/media/rharish/822A-B6CA/CS220Labs/Lab1_3/two_bit_adder/two_bit_adder_top.v" Line 58
+# exit 0

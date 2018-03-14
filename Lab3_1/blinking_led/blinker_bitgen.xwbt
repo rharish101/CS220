@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led/blinker.ncd
+OUTFILE=/media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led/blinker.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led
+LICENSE=WebPack
+USER_INFO=211450758_0_0_676

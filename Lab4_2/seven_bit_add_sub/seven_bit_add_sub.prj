@@ -1,0 +1,4 @@
+verilog work "full_adder.v"
+verilog work "rotation_info.v"
+verilog work "input_taker.v"
+verilog work "seven_bit_add_sub.v"

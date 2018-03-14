@@ -1,0 +1,5 @@
+verilog work "LCD_base_driver.v"
+verilog work "LCD_driver.v"
+verilog work "LCD_top.v"
+verilog work "simulation.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

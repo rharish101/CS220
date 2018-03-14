@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.syr" 
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.syr" 
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.syr" 
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rotary_encoder.ucf -p xc3s500e-fg320-4 rotary_encoder.ngc rotary_encoder.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rotary_encoder_map.ncd rotary_encoder.ngd rotary_encoder.pcf 
+par -w -intstyle ise -ol high -t 1 rotary_encoder_map.ncd rotary_encoder.ncd rotary_encoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rotary_encoder.twx rotary_encoder.ncd -o rotary_encoder.twr rotary_encoder.pcf -ucf rotary_encoder.ucf 
+bitgen -intstyle ise -f rotary_encoder.ut rotary_encoder.ncd 
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.syr" 
+xst -intstyle ise -ifn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.xst" -ofn "/media/rharish/822A-B6CA/CS220Labs/Lab4_1/rotary_encoder/rotary_encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc rotary_encoder.ucf -p xc3s500e-fg320-4 rotary_encoder.ngc rotary_encoder.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o rotary_encoder_map.ncd rotary_encoder.ngd rotary_encoder.pcf 
+par -w -intstyle ise -ol high -t 1 rotary_encoder_map.ncd rotary_encoder.ncd rotary_encoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml rotary_encoder.twx rotary_encoder.ncd -o rotary_encoder.twr rotary_encoder.pcf -ucf rotary_encoder.ucf 
+bitgen -intstyle ise -f rotary_encoder.ut rotary_encoder.ncd 

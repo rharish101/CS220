@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/media/rharish/Harish/CS220A_Labs/Lab5_1/lcd_display/impact.xsl
+OUTFILE=/media/rharish/Harish/CS220A_Labs/Lab5_1/lcd_display/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/media/rharish/Harish/CS220A_Labs/Lab5_1/lcd_display
+LICENSE=iMPACT
+USER_INFO=iMPACT

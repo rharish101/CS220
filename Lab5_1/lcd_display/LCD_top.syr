@@ -1,0 +1,432 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> 
+Reading design: LCD_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LCD_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LCD_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : LCD_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "LCD_base_driver.v" in library work
+Compiling verilog file "LCD_driver.v" in library work
+Module <LCD_base_driver> compiled
+Compiling verilog file "LCD_top.v" in library work
+Module <LCD_driver> compiled
+Module <LCD_top> compiled
+No errors in compilation
+Analysis of file <"LCD_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <LCD_top> in library <work>.
+
+Analyzing hierarchy for module <LCD_driver> in library <work>.
+
+Analyzing hierarchy for module <LCD_base_driver> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <LCD_top>.
+Module <LCD_top> is correct for synthesis.
+ 
+Analyzing module <LCD_driver> in library <work>.
+Module <LCD_driver> is correct for synthesis.
+ 
+Analyzing module <LCD_base_driver> in library <work>.
+Module <LCD_base_driver> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <LCD_base_driver>.
+    Related source file is "LCD_base_driver.v".
+    Found 4x1-bit ROM for signal <LCD_Er>.
+    Found 1-bit 4-to-1 multiplexer for signal <LCD_RSr>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Multiplexer(s).
+Unit <LCD_base_driver> synthesized.
+
+
+Synthesizing Unit <LCD_driver>.
+    Related source file is "LCD_driver.v".
+WARNING:Xst:646 - Signal <config_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit 320-to-1 multiplexer for signal <$varindex0000> created at line 85.
+    Found 1-bit 320-to-1 multiplexer for signal <$varindex0001> created at line 86.
+    Found 1-bit 320-to-1 multiplexer for signal <$varindex0002> created at line 87.
+    Found 1-bit 320-to-1 multiplexer for signal <$varindex0003> created at line 88.
+    Found 23-bit up counter for signal <addr_q>.
+    Found 2-bit up counter for signal <counter_q>.
+    Found 4-bit register for signal <data_out>.
+    Found 9-bit adder for signal <l1index>.
+    Found 7-bit comparator less for signal <operation$cmp_lt0000> created at line 47.
+    Found 7-bit comparator less for signal <process>.
+    Found 9-bit adder for signal <r1index>.
+    Found 9-bit adder for signal <rindex>.
+    Found 1-bit register for signal <RS_Signal>.
+    Found 7-bit adder for signal <state_d$addsub0000> created at line 67.
+    Found 7-bit register for signal <state_q>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <LCD_driver> synthesized.
+
+
+Synthesizing Unit <LCD_top>.
+    Related source file is "LCD_top.v".
+WARNING:Xst:653 - Signal <LINE2> is used but never assigned. This sourceless signal will be automatically connected to value 00100000010010010010000001001001001000000100100100100000001000000100101101000001010011100101000001010101010100100010000000100000.
+WARNING:Xst:653 - Signal <LINE1> is used but never assigned. This sourceless signal will be automatically connected to value 00100000010101110100010101001100010000110100111101001101010001010010000001010100010011110010000001000011010100110100010100100000.
+Unit <LCD_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 7-bit adder                                           : 1
+ 9-bit adder                                           : 3
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 23-bit up counter                                     : 1
+# Registers                                            : 6
+ 1-bit register                                        : 5
+ 7-bit register                                        : 1
+# Comparators                                          : 2
+ 7-bit comparator less                                 : 2
+# Multiplexers                                         : 5
+ 1-bit 320-to-1 multiplexer                            : 4
+ 1-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 7-bit adder                                           : 1
+ 9-bit adder                                           : 3
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 23-bit up counter                                     : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 2
+ 7-bit comparator less                                 : 2
+# Multiplexers                                         : 4
+ 1-bit 320-to-1 multiplexer                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <LCD_top> ...
+
+Optimizing unit <LCD_driver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LCD_top, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : LCD_top.ngr
+Top Level Output File Name         : LCD_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 8
+
+Cell Usage :
+# BELS                             : 144
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 22
+#      LUT2                        : 3
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 13
+#      LUT3_L                      : 1
+#      LUT4                        : 29
+#      LUT4_D                      : 1
+#      LUT4_L                      : 2
+#      MUXCY                       : 28
+#      MUXF5                       : 10
+#      MUXF6                       : 4
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 23
+# FlipFlops/Latches                : 37
+#      FD                          : 3
+#      FDE                         : 9
+#      FDR                         : 24
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      OBUF                        : 7
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       41  out of   4656     0%  
+ Number of Slice Flip Flops:             37  out of   9312     0%  
+ Number of 4 input LUTs:                 76  out of   9312     0%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 37    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.251ns (Maximum Frequency: 159.974MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.795ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.251ns (frequency: 159.974MHz)
+  Total number of paths / destination ports: 1220 / 70
+-------------------------------------------------------------------------
+Delay:               6.251ns (Levels of Logic = 5)
+  Source:            driverm/state_q_4 (FF)
+  Destination:       driverm/data_out_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: driverm/state_q_4 to driverm/data_out_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             21   0.591   1.303  driverm/state_q_4 (driverm/state_q_4)
+     LUT3:I0->O            1   0.704   0.000  driverm/Mmux__varindex0002_10 (driverm/Mmux__varindex0002_10)
+     MUXF5:I0->O           1   0.321   0.000  driverm/Mmux__varindex0002_8_f5 (driverm/Mmux__varindex0002_8_f5)
+     MUXF6:I1->O           1   0.521   0.455  driverm/Mmux__varindex0002_7_f6 (driverm/Mmux__varindex0002_7_f6)
+     LUT3:I2->O            1   0.704   0.000  driverm/Mmux__varindex0002_4 (driverm/Mmux__varindex0002_4)
+     MUXF5:I0->O           1   0.321   0.420  driverm/Mmux__varindex0002_2_f5 (driverm/_varindex00021)
+     FDR:R                     0.911          driverm/data_out_1
+    ----------------------------------------
+    Total                      6.251ns (4.073ns logic, 2.178ns route)
+                                       (65.2% logic, 34.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 9 / 6
+-------------------------------------------------------------------------
+Offset:              5.795ns (Levels of Logic = 2)
+  Source:            driverm/counter_q_0 (FF)
+  Destination:       LCD_E (PAD)
+  Source Clock:      clk rising
+
+  Data Path: driverm/counter_q_0 to LCD_E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.591   0.808  driverm/counter_q_0 (driverm/counter_q_0)
+     LUT2:I0->O            1   0.704   0.420  driverm/driver/Mrom_LCD_Er11 (LCD_E_OBUF)
+     OBUF:I->O                 3.272          LCD_E_OBUF (LCD_E)
+    ----------------------------------------
+    Total                      5.795ns (4.567ns logic, 1.228ns route)
+                                       (78.8% logic, 21.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 38.00 secs
+Total CPU time to Xst completion: 35.68 secs
+ 
+--> 
+
+
+Total memory usage is 524208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Jan 31 15:44:39 2018
+# Process ID: 5406
+# Log file: /media/rharish/822A-B6CA/CS220Labs/Lab2_2/eight_bit_comparator/planAhead_run_1/planAhead.log
+# Journal file: /media/rharish/822A-B6CA/CS220Labs/Lab2_2/eight_bit_comparator/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /media/rharish/822A-B6CA/CS220Labs/Lab2_2/eight_bit_comparator/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin L13 [get_ports {Y[0]}]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports {Y[1]}]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports {Y[2]}]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports {Y[3]}]
+endgroup
+set_property iostandard LVTTL [get_ports [list {Y[3]} {Y[2]} {Y[1]} {Y[0]}]]
+set_property pulltype PULLUP [get_ports [list {Y[3]} {Y[2]} {Y[1]} {Y[0]}]]
+startgroup
+set_property package_pin V4 [get_ports PB1]
+endgroup
+startgroup
+set_property package_pin H13 [get_ports PB2]
+endgroup
+startgroup
+set_property package_pin D18 [get_ports PB3]
+endgroup
+startgroup
+set_property package_pin K17 [get_ports PB4]
+endgroup
+set_property iostandard LVTTL [get_ports [list PB1]]
+set_property iostandard LVTTL [get_ports [list PB2]]
+set_property iostandard LVTTL [get_ports [list PB3]]
+set_property iostandard LVTTL [get_ports [list PB4]]
+set_property iostandard LVTTL [get_ports [list less]]
+set_property iostandard LVTTL [get_ports [list more]]
+set_property iostandard LVTTL [get_ports [list equal]]
+set_property pulltype PULLDOWN [get_ports [list PB1]]
+set_property pulltype PULLDOWN [get_ports [list PB2]]
+set_property pulltype PULLDOWN [get_ports [list PB3]]
+set_property pulltype PULLDOWN [get_ports [list PB4]]
+set_property drive 8 [get_ports [list equal]]
+set_property drive 8 [get_ports [list less]]
+set_property drive 8 [get_ports [list more]]
+startgroup
+set_property package_pin F12 [get_ports equal]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports less]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports more]
+endgroup
+set_property package_pin "" [get_ports [list  more]]
+startgroup
+set_property package_pin E12 [get_ports equal]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports more]
+endgroup
+save_constraints

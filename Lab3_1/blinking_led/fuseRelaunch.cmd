@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led/blinker_top_isim_beh.exe" -prj "/media/raditya/822A-B6CA/CS220Labs/Lab3_1/blinking_led/blinker_top_beh.prj" "work.blinker_top" "work.glbl" 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/media/rharish/822A-B6CA/CS220Labs/Lab1_2/full_adder_schematic/full_adder_sch.ncd
+OUTFILE=/media/rharish/822A-B6CA/CS220Labs/Lab1_2/full_adder_schematic/full_adder_sch.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/media/rharish/822A-B6CA/CS220Labs/Lab1_2/full_adder_schematic
+LICENSE=WebPack
+USER_INFO=211450758_0_0_676
