@@ -1,0 +1,6 @@
+verilog work "xorval.v"
+verilog work "right_shift.v"
+verilog work "Bigger.v"
+verilog work "top.v"
+verilog work "lcddisplay.v"
+verilog work "topcaller.v"

@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Mon Mar 19 15:46:53 2018
+# Process ID: 7541
+# Log file: /users/btech/raghavgg/Documents/LAB7B/planAhead_run_1/planAhead.log
+# Journal file: /users/btech/raghavgg/Documents/LAB7B/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /users/btech/raghavgg/Documents/LAB7B/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

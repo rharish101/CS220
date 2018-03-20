@@ -1,0 +1,66 @@
+
+# PlanAhead Generated IO constraints 
+
+NET "bits[3]" IOSTANDARD = LVTTL;
+NET "bits[2]" IOSTANDARD = LVTTL;
+NET "bits[1]" IOSTANDARD = LVTTL;
+NET "bits[0]" IOSTANDARD = LVTTL;
+NET "bits[3]" PULLUP;
+NET "bits[2]" PULLUP;
+NET "bits[1]" PULLUP;
+NET "bits[0]" PULLUP;
+
+# PlanAhead Generated physical constraints 
+
+NET "bits[3]" LOC = N17;
+NET "bits[2]" LOC = H18;
+NET "bits[1]" LOC = L14;
+NET "bits[0]" LOC = L13;
+NET "databits[3]" LOC = M15;
+NET "databits[2]" LOC = P17;
+NET "databits[1]" LOC = R16;
+NET "databits[0]" LOC = R15;
+
+# PlanAhead Generated IO constraints 
+
+NET "databits[3]" IOSTANDARD = LVCMOS33;
+NET "databits[2]" IOSTANDARD = LVCMOS33;
+NET "databits[1]" IOSTANDARD = LVCMOS33;
+NET "databits[0]" IOSTANDARD = LVCMOS33;
+NET "databits[3]" DRIVE = 4;
+NET "databits[2]" DRIVE = 4;
+NET "databits[1]" DRIVE = 4;
+NET "databits[0]" DRIVE = 4;
+NET "clk" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = C9;
+NET "lcd_e" LOC = M18;
+NET "lcd_rs" LOC = L18;
+NET "lcd_w" LOC = L17;
+NET "reset" LOC = V16;
+
+# PlanAhead Generated IO constraints 
+
+NET "reset" PULLDOWN;
+
+# PlanAhead Generated physical constraints 
+
+NET "rot_a" LOC = K18;
+NET "rot_b" LOC = G18;
+
+# PlanAhead Generated IO constraints 
+
+NET "lcd_e" IOSTANDARD = LVCMOS33;
+NET "lcd_rs" IOSTANDARD = LVCMOS33;
+NET "lcd_w" IOSTANDARD = LVCMOS33;
+NET "reset" IOSTANDARD = LVTTL;
+NET "rot_a" IOSTANDARD = LVTTL;
+NET "rot_b" IOSTANDARD = LVTTL;
+NET "rot_a" PULLUP;
+NET "rot_b" PULLUP;
+NET "lcd_e" DRIVE = 4;
+NET "lcd_rs" DRIVE = 4;
+NET "lcd_w" DRIVE = 4;
+NET "clk" PERIOD = 20.0ns HIGH 50%;

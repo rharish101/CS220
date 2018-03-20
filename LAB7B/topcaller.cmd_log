@@ -1,0 +1,35 @@
+xst -intstyle ise -ifn "/users/btech/raghavgg/Documents/LAB7B/topcaller.xst" -ofn "/users/btech/raghavgg/Documents/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+xst -intstyle ise -ifn "/users/btech/raghavgg/Documents/LAB7B/topcaller.xst" -ofn "/users/btech/raghavgg/Documents/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
+bitgen -intstyle ise -f topcaller.ut topcaller.ncd 
+xst -intstyle ise -ifn "/users/btech/raghavgg/Documents/LAB7B/topcaller.xst" -ofn "/users/btech/raghavgg/Documents/LAB7B/topcaller.syr" 
+xst -intstyle ise -ifn "/users/btech/raghavgg/Documents/LAB7B/topcaller.xst" -ofn "/users/btech/raghavgg/Documents/LAB7B/topcaller.syr" 
+xst -intstyle ise -ifn "/users/btech/raghavgg/Documents/LAB7B/topcaller.xst" -ofn "/users/btech/raghavgg/Documents/LAB7B/topcaller.syr" 
+xst -intstyle ise -ifn "/users/btech/raghavgg/Documents/LAB7B/topcaller.xst" -ofn "/users/btech/raghavgg/Documents/LAB7B/topcaller.syr" 
+xst -intstyle ise -ifn "F:/LAB7B/topcaller.xst" -ofn "F:/LAB7B/topcaller.syr" 
+xst -intstyle ise -ifn "F:/LAB7B/topcaller.xst" -ofn "F:/LAB7B/topcaller.syr" 
+xst -intstyle ise -ifn "F:/LAB7B/topcaller.xst" -ofn "F:/LAB7B/topcaller.syr" 
+xst -intstyle ise -ifn "/run/media/rharish/LUCIFER/LAB7B/topcaller.xst" -ofn "/run/media/rharish/LUCIFER/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
+bitgen -intstyle ise -f topcaller.ut topcaller.ncd 
+xst -intstyle ise -ifn "/run/media/rharish/LUCIFER/LAB7B/topcaller.xst" -ofn "/run/media/rharish/LUCIFER/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
+bitgen -intstyle ise -f topcaller.ut topcaller.ncd 
+xst -intstyle ise -ifn "/run/media/rharish/LUCIFER/LAB7B/topcaller.xst" -ofn "/run/media/rharish/LUCIFER/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
+bitgen -intstyle ise -f topcaller.ut topcaller.ncd 

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/users/btech/raghavgg/Documents/LAB7B/impact.xsl
+OUTFILE=/users/btech/raghavgg/Documents/LAB7B/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/users/btech/raghavgg/Documents/LAB7B
+LICENSE=iMPACT
+USER_INFO=iMPACT

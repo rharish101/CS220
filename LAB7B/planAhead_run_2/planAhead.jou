@@ -1,0 +1,77 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Mon Mar 19 16:16:36 2018
+# Process ID: 8087
+# Log file: /users/btech/raghavgg/Documents/LAB7B/planAhead_run_2/planAhead.log
+# Journal file: /users/btech/raghavgg/Documents/LAB7B/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /users/btech/raghavgg/Documents/LAB7B/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property iostandard LVTTL [get_ports [list {bits[3]} {bits[2]} {bits[1]} {bits[0]}]]
+set_property pulltype PULLUP [get_ports [list {bits[3]} {bits[2]} {bits[1]} {bits[0]}]]
+startgroup
+set_property package_pin N17 [get_ports {bits[3]}]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports {bits[2]}]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports {bits[1]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {bits[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {databits[2]}]]
+startgroup
+set_property package_pin M15 [get_ports {databits[3]}]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports {databits[2]}]
+endgroup
+startgroup
+set_property package_pin R16 [get_ports {databits[1]}]
+endgroup
+startgroup
+set_property package_pin R15 [get_ports {databits[0]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {databits[0]}]]
+set_property is_loc_fixed true [get_ports [list  {databits[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {databits[3]} {databits[2]} {databits[1]} {databits[0]}]]
+set_property drive 4 [get_ports [list {databits[3]} {databits[2]} {databits[1]} {databits[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin M18 [get_ports lcd_e]
+endgroup
+startgroup
+set_property package_pin L18 [get_ports lcd_rs]
+endgroup
+startgroup
+set_property package_pin L17 [get_ports lcd_w]
+endgroup
+startgroup
+set_property package_pin V16 [get_ports reset]
+endgroup
+set_property pulltype PULLDOWN [get_ports [list reset]]
+startgroup
+set_property package_pin K18 [get_ports rot_a]
+endgroup
+startgroup
+set_property package_pin G18 [get_ports rot_b]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list lcd_e]]
+set_property iostandard LVCMOS33 [get_ports [list lcd_rs]]
+set_property iostandard LVCMOS33 [get_ports [list lcd_w]]
+set_property iostandard LVTTL [get_ports [list reset]]
+set_property iostandard LVTTL [get_ports [list rot_a]]
+set_property iostandard LVTTL [get_ports [list rot_b]]
+set_property pulltype PULLUP [get_ports [list rot_a]]
+set_property pulltype PULLUP [get_ports [list rot_b]]
+set_property drive 4 [get_ports [list lcd_e]]
+set_property drive 4 [get_ports [list lcd_rs]]
+set_property drive 4 [get_ports [list lcd_w]]
+save_constraints
