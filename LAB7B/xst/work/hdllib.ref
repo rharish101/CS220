@@ -1,11 +1,11 @@
-MO lcd_driver NULL lcddisplay.v vlg46/lcd__driver.bin 1521554945
+MO lcd_driver NULL lcddisplay.v vlg46/lcd__driver.bin 1521624642
 MO detector NULL detector.v vlg02/detector.bin 1521466250
-MO right_shift NULL right_shift.v vlg1B/right__shift.bin 1521554945
-MO topcaller NULL topcaller.v vlg6A/topcaller.bin 1521554945
+MO right_shift NULL right_shift.v vlg1B/right__shift.bin 1521624642
+MO topcaller NULL topcaller.v vlg6A/topcaller.bin 1521624642
 MO register_file NULL top.v vlg7C/register__file.bin 1521454567
 MO left_shift NULL left_shift.v vlg4C/left__shift.bin 1521464874
-MO xorval NULL xorval.v vlg58/xorval.bin 1521554945
+MO xorval NULL xorval.v vlg58/xorval.bin 1521624642
 MO full_adder NULL full_adder.v vlg5A/full__adder.bin 1521458445
 MO sixteen_arithmetic NULL sixteen_arthimetic.v vlg29/sixteen__arithmetic.bin 1521458446
-MO interface NULL top.v vlg09/interface.bin 1521554945
-MO Bigger NULL Bigger.v vlg48/_bigger.bin 1521554945
+MO interface NULL top.v vlg09/interface.bin 1521624642
+MO Bigger NULL Bigger.v vlg48/_bigger.bin 1521624642

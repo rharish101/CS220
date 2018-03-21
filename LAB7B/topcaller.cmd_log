@@ -33,3 +33,21 @@ map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcall
 par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
 bitgen -intstyle ise -f topcaller.ut topcaller.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
+bitgen -intstyle ise -f topcaller.ut topcaller.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
+bitgen -intstyle ise -f topcaller.ut topcaller.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topcaller.ucf -p xc3s500e-fg320-4 topcaller.ngc topcaller.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topcaller_map.ncd topcaller.ngd topcaller.pcf 
+par -w -intstyle ise -ol high -t 1 topcaller_map.ncd topcaller.ncd topcaller.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topcaller.twx topcaller.ncd -o topcaller.twr topcaller.pcf -ucf topcaller.ucf 
+bitgen -intstyle ise -f topcaller.ut topcaller.ncd 

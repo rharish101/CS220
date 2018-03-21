@@ -25,7 +25,7 @@ module right_shift(clk,a,shift,res
 	 input[3:0] shift;
 	 output reg[15:0] res;
 	 always@(posedge clk)begin
-	 res <= (a >> shift);
+	 res <= ($signed(a) >>> shift);
 	 end
 
 

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/run/media/rharish/LUCIFER/LAB7B/topcaller.ncd
-OUTFILE=/run/media/rharish/LUCIFER/LAB7B/topcaller.bit
+INFILE=/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.ncd
+OUTFILE=/mnt/Data/Dropbox/CS220A_Labs/LAB7B/topcaller.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4fg320
-WORKINGDIR=/run/media/rharish/LUCIFER/LAB7B
+WORKINGDIR=/mnt/Data/Dropbox/CS220A_Labs/LAB7B
 LICENSE=WebPack
 USER_INFO=211470247_0_0_533

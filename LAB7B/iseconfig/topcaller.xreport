@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-03-20T19:23:45</DateModified>
+  <DateModified>2018-03-21T13:58:48</DateModified>
   <ModuleName>topcaller</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/run/media/rharish/LUCIFER/LAB7B/iseconfig/topcaller.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/run/media/rharish/LUCIFER/LAB7B/</ImplementationReportsDirectory>
+  <SavedFilePath>/mnt/Data/Dropbox/CS220A_Labs/LAB7B/iseconfig/topcaller.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/mnt/Data/Dropbox/CS220A_Labs/LAB7B/</ImplementationReportsDirectory>
   <DateInitialized>2018-03-19T18:28:28</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

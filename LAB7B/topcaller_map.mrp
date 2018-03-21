@@ -9,23 +9,23 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue Mar 20 19:40:03 2018
+Mapped Date    : Wed Mar 21 15:01:31 2018
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           703 out of   9,312    7%
-  Number of 4 input LUTs:             1,911 out of   9,312   20%
+  Number of Slice Flip Flops:           702 out of   9,312    7%
+  Number of 4 input LUTs:             1,870 out of   9,312   20%
 Logic Distribution:
-  Number of occupied Slices:            988 out of   4,656   21%
-    Number of Slices containing only related logic:     988 out of     988 100%
-    Number of Slices containing unrelated logic:          0 out of     988   0%
+  Number of occupied Slices:            964 out of   4,656   20%
+    Number of Slices containing only related logic:     964 out of     964 100%
+    Number of Slices containing unrelated logic:          0 out of     964   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,939 out of   9,312   20%
-    Number used as logic:             1,911
-    Number used as a route-thru:         28
+  Total Number of 4 input LUTs:       1,903 out of   9,312   20%
+    Number used as logic:             1,870
+    Number used as a route-thru:         33
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -33,11 +33,11 @@ Logic Distribution:
   Number of bonded IOBs:                 15 out of     232    6%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                4.49
+Average Fanout of Non-Clock Nets:                4.53
 
-Peak Memory Usage:  590 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   3 secs 
+Peak Memory Usage:  589 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -78,6 +78,9 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:Pack:266 - The function generator L0/LCD_E_and00001 failed to merge with
+   F5 multiplexer L0/LCD_E_mux0000244_SW0_SW0.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
 
 Section 3 - Informational
 -------------------------

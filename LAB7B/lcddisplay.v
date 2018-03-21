@@ -1007,13 +1007,13 @@ module lcd_driver(line_a, line_b, clk, LCD_RS, LCD_W, LCD_E, databits
                 16'h00EF: begin
                     LCD_E<=1;
                 end
-
+                default: begin
+                    LCD_E <= 0;
+                end
 
 					endcase
 
-	if(state!=16'h00EF)
-            state<=state+1;
-	else state<=0;	
+    state<=state+1;
 	// move to next state
             counter<=0;
         end

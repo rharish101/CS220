@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Mar 20 19:40:09 2018">
+<application name="pn" timeStamp="Wed Mar 21 15:01:35 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="F14D10D0A1F92879454EAA822B7748A3" type="project"/>
-<property name="ProjectIteration" value="5" type="project"/>
-<property name="ProjectFile" value="/run/media/rharish/LUCIFER/LAB7B/LAB7B.xise" type="project"/>
+<property name="ProjectIteration" value="8" type="project"/>
+<property name="ProjectFile" value="/mnt/Data/Dropbox/CS220A_Labs/LAB7B/LAB7B.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2018-03-19T14:58:45" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -28,7 +28,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserEditorPreference" value="Custom" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2018-03-19T14:58:45" type="design"/>
 <property name="PROP_intWbtProjectID" value="F14D10D0A1F92879454EAA822B7748A3" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="5" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="8" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
