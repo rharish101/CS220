@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/impact.xsl
+OUTFILE=/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor
+LICENSE=iMPACT
+USER_INFO=iMPACT

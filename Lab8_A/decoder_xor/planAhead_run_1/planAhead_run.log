@@ -1,0 +1,93 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/pa.fromHdl.tcl
+# create_project -name decoder_xor -dir "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/planAhead_run_1" -part xc3s500efg320-4
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "registers.ucf" [current_fileset -constrset]
+Adding file '/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {../../../../../../../mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top registers $srcset
+# add_files [list {registers.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s500efg320-4
+Using Verific elaboration
+Parsing VHDL file "/mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "/../mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.v" into library work
+INFO: [Designutils 20-910] Reading macro library /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockRegion.xml
+Loading clock buffers from /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockBuffers.xml
+Loading package from /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/Package.xml
+Loading io standards from /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/SSORules.xml
+Loading list of drcs for the architecture : /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library /mnt/Data/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.ucf]
+Finished Parsing UCF File [/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: ff6defc8
+open_rtl_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2864.492 ; gain = 133.172
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin F12 [get_ports {leds[0]}]
+endgroup
+set_property iostandard LVTTL [get_ports [list {leds[0]}]]
+set_property iostandard LVTTL [get_ports [list {leds[7]}]]
+set_property iostandard LVTTL [get_ports [list {leds[6]}]]
+set_property iostandard LVTTL [get_ports [list {leds[5]}]]
+set_property iostandard LVTTL [get_ports [list {leds[4]}]]
+set_property iostandard LVTTL [get_ports [list {leds[3]}]]
+set_property iostandard LVTTL [get_ports [list {leds[2]}]]
+set_property iostandard LVTTL [get_ports [list {leds[1]}]]
+set_property drive 8 [get_ports [list {leds[7]} {leds[6]} {leds[5]} {leds[4]} {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
+startgroup
+set_property package_pin E12 [get_ports {leds[1]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {leds[2]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {leds[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {leds[4]}]]
+startgroup
+set_property package_pin C11 [get_ports {leds[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {leds[5]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {leds[6]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {leds[7]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports switch]
+endgroup
+set_property iostandard LVTTL [get_ports [list switch]]
+set_property pulltype PULLUP [get_ports [list switch]]
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Mar 28 14:42:41 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

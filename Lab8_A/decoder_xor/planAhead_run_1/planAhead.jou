@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Mar 28 14:38:16 2018
+# Process ID: 6242
+# Log file: /mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/planAhead_run_1/planAhead.log
+# Journal file: /mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin F12 [get_ports {leds[0]}]
+endgroup
+set_property iostandard LVTTL [get_ports [list {leds[0]}]]
+set_property iostandard LVTTL [get_ports [list {leds[7]}]]
+set_property iostandard LVTTL [get_ports [list {leds[6]}]]
+set_property iostandard LVTTL [get_ports [list {leds[5]}]]
+set_property iostandard LVTTL [get_ports [list {leds[4]}]]
+set_property iostandard LVTTL [get_ports [list {leds[3]}]]
+set_property iostandard LVTTL [get_ports [list {leds[2]}]]
+set_property iostandard LVTTL [get_ports [list {leds[1]}]]
+set_property drive 8 [get_ports [list {leds[7]} {leds[6]} {leds[5]} {leds[4]} {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
+startgroup
+set_property package_pin E12 [get_ports {leds[1]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {leds[2]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {leds[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {leds[4]}]]
+startgroup
+set_property package_pin C11 [get_ports {leds[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {leds[5]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {leds[6]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {leds[7]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports switch]
+endgroup
+set_property iostandard LVTTL [get_ports [list switch]]
+set_property pulltype PULLUP [get_ports [list switch]]
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+save_constraints

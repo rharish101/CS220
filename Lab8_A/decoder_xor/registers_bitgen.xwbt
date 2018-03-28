@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.ncd
+OUTFILE=/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor
+LICENSE=WebPack
+USER_INFO=211470247_0_0_533

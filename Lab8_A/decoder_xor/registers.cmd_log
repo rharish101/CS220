@@ -1,0 +1,49 @@
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml registers.twx registers.ncd -o registers.twr registers.pcf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml registers.twx registers.ncd -o registers.twr registers.pcf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc registers.ucf -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml registers.twx registers.ncd -o registers.twr registers.pcf -ucf registers.ucf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc registers.ucf -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc registers.ucf -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml registers.twx registers.ncd -o registers.twr registers.pcf -ucf registers.ucf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc registers.ucf -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml registers.twx registers.ncd -o registers.twr registers.pcf -ucf registers.ucf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
+xst -intstyle ise -ifn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.xst" -ofn "/mnt/Data/Dropbox/CS220A_Labs/Lab8_A/decoder_xor/registers.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc registers.ucf -p xc3s500e-fg320-4 registers.ngc registers.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o registers_map.ncd registers.ngd registers.pcf 
+par -w -intstyle ise -ol high -t 1 registers_map.ncd registers.ncd registers.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml registers.twx registers.ncd -o registers.twr registers.pcf -ucf registers.ucf 
+bitgen -intstyle ise -f registers.ut registers.ncd 
