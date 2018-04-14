@@ -1,0 +1,668 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> 
+Reading design: lab10.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lab10.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lab10"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : lab10
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lab10.v" in library work
+Module <lab10> compiled
+No errors in compilation
+Analysis of file <"lab10.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <lab10> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <lab10>.
+INFO:Xst:1433 - Contents of array <memory> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1433 - Contents of array <arr> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <lab10> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lab10>.
+    Related source file is "lab10.v".
+WARNING:Xst:1781 - Signal <memory> is used but never assigned. Tied to default value.
+WARNING:Xst:646 - Signal <dest<27:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1781 - Signal <arr> is used but never assigned. Tied to default value.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 14x32-bit ROM for signal <$varindex0000> created at line 99.
+    Found 11x8-bit ROM for signal <$COND_5>.
+    Found 8-bit register for signal <leds>.
+    Found 256-bit register for signal <data>.
+    Found 8-bit comparator less for signal <data_0$cmp_lt0000> created at line 133.
+    Found 8-bit adder for signal <data_31$addsub0000> created at line 161.
+    Found 28-bit register for signal <dest>.
+    Found 8-bit adder carry out for signal <dest$addsub0000> created at line 165.
+    Found 6-bit register for signal <func>.
+    Found 8-bit register for signal <immediate>.
+    Found 6-bit register for signal <opcode>.
+    Found 8-bit register for signal <pcount>.
+    Found 8-bit comparator equal for signal <pcount$cmp_eq0003> created at line 151.
+    Found 8-bit comparator not equal for signal <pcount$cmp_ne0000> created at line 156.
+    Found 8-bit adder for signal <pcount$share0000>.
+    Found 5-bit register for signal <rd>.
+    Found 5-bit register for signal <rs>.
+    Found 8-bit register for signal <rs_val>.
+    Found 5-bit register for signal <rt>.
+    Found 8-bit register for signal <rt_val>.
+    Found 8-bit comparator less for signal <state$cmp_lt0000> created at line 176.
+    Found 32-bit register for signal <temp>.
+INFO:Xst:738 - HDL ADVISOR - 256 flip-flops were inferred for signal <data>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 ROM(s).
+	inferred 383 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <lab10> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 11x8-bit ROM                                          : 1
+ 14x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 5
+ 8-bit adder                                           : 4
+ 8-bit adder carry out                                 : 1
+# Registers                                            : 44
+ 28-bit register                                       : 1
+ 32-bit register                                       : 1
+ 5-bit register                                        : 3
+ 6-bit register                                        : 2
+ 8-bit register                                        : 37
+# Comparators                                          : 4
+ 8-bit comparator equal                                : 1
+ 8-bit comparator less                                 : 2
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 8-bit 32-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <state/FSM> on signal <state[1:7]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 0000001
+ 001   | 0000010
+ 010   | 0000100
+ 011   | 0001000
+ 100   | 0010000
+ 101   | 0100000
+ 110   | 1000000
+-------------------
+WARNING:Xst:2677 - Node <dest_8> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_9> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_10> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_11> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_12> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_13> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_14> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_15> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_16> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_17> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_18> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_19> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_20> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_21> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_22> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_23> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_24> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_25> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_26> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_27> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <temp_8> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <temp_9> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <temp_10> of sequential type is unconnected in block <lab10>.
+
+Synthesizing (advanced) Unit <lab10>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom__varindex0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom__COND_5> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <lab10> synthesized (advanced).
+WARNING:Xst:2677 - Node <dest_8> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_9> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_10> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_11> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_12> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_13> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_14> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_15> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_16> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_17> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_18> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_19> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_20> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_21> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_22> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_23> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_24> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_25> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_26> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <dest_27> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <temp_8> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <temp_9> of sequential type is unconnected in block <lab10>.
+WARNING:Xst:2677 - Node <temp_10> of sequential type is unconnected in block <lab10>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 2
+ 11x8-bit ROM                                          : 1
+ 14x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 5
+ 8-bit adder                                           : 4
+ 8-bit adder carry out                                 : 1
+# Registers                                            : 360
+ Flip-Flops                                            : 360
+# Comparators                                          : 4
+ 8-bit comparator equal                                : 1
+ 8-bit comparator less                                 : 2
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 8-bit 32-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <temp_19> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <temp_20> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <temp_30> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rt_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <rt_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <opcode_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <temp_4> in Unit <lab10> is equivalent to the following 5 FFs/Latches, which will be removed : <temp_6> <temp_7> <temp_11> <temp_14> <temp_15> 
+INFO:Xst:2261 - The FF/Latch <temp_24> in Unit <lab10> is equivalent to the following FF/Latch, which will be removed : <temp_25> 
+INFO:Xst:2261 - The FF/Latch <immediate_4> in Unit <lab10> is equivalent to the following 2 FFs/Latches, which will be removed : <immediate_6> <immediate_7> 
+INFO:Xst:2261 - The FF/Latch <rd_0> in Unit <lab10> is equivalent to the following 3 FFs/Latches, which will be removed : <rd_3> <rd_4> <func_4> 
+WARNING:Xst:1293 - FF/Latch <data_19_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_19_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_19_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_19_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_19_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_19_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_19_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_19_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_18_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_16_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_15_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_23_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_22_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_21_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_20_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_11_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_9_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_8_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_10_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_17_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_14_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_13_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_12_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <lab10> ...
+WARNING:Xst:1293 - FF/Latch <data_30_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_30_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_30_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_30_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_30_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_30_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_30_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_28_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_26_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_7> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_6> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_5> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_4> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_3> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_2> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_1> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_24_0> has a constant value of 0 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30_2> has a constant value of 1 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_30_2> has a constant value of 1 in block <lab10>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lab10, actual ratio is 5.
+FlipFlop opcode_0 has been replicated 2 time(s)
+FlipFlop opcode_1 has been replicated 1 time(s)
+FlipFlop opcode_3 has been replicated 1 time(s)
+FlipFlop opcode_5 has been replicated 1 time(s)
+FlipFlop rd_0 has been replicated 1 time(s)
+FlipFlop rt_0 has been replicated 2 time(s)
+FlipFlop rt_1 has been replicated 1 time(s)
+FlipFlop state_FSM_FFd4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 200
+ Flip-Flops                                            : 200
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lab10.ngr
+Top Level Output File Name         : lab10
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 690
+#      GND                         : 1
+#      LUT2                        : 70
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 135
+#      LUT3_D                      : 18
+#      LUT3_L                      : 11
+#      LUT4                        : 215
+#      LUT4_D                      : 36
+#      LUT4_L                      : 35
+#      MUXCY                       : 36
+#      MUXF5                       : 49
+#      MUXF6                       : 24
+#      MUXF7                       : 16
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 200
+#      FD                          : 65
+#      FDE                         : 88
+#      FDS                         : 47
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      281  out of   4656     6%  
+ Number of Slice Flip Flops:            200  out of   9312     2%  
+ Number of 4 input LUTs:                523  out of   9312     5%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 200   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.461ns (Maximum Frequency: 118.194MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.461ns (frequency: 118.194MHz)
+  Total number of paths / destination ports: 10214 / 335
+-------------------------------------------------------------------------
+Delay:               8.461ns (Levels of Logic = 5)
+  Source:            rt_2 (FF)
+  Destination:       data_2_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: rt_2 to data_2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             27   0.591   1.340  rt_2 (rt_2)
+     LUT3_D:I1->O          9   0.704   0.824  data_2_cmp_eq00011 (data_2_cmp_eq0001)
+     LUT4:I3->O            1   0.704   0.000  data_2_mux0000<0>131_F (N232)
+     MUXF5:I0->O           7   0.321   0.787  data_2_mux0000<0>131 (data_2_mux0000<0>131)
+     LUT3:I1->O            2   0.704   0.451  data_2_mux0000<0>166 (N0)
+     LUT4:I3->O            1   0.704   0.420  data_2_mux0000<0>4 (data_2_mux0000<0>4)
+     FDS:S                     0.911          data_2_0
+    ----------------------------------------
+    Total                      8.461ns (4.639ns logic, 3.822ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            leds_7 (FF)
+  Destination:       leds<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: leds_7 to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  leds_7 (leds_7)
+     OBUF:I->O                 3.272          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 94.00 secs
+Total CPU time to Xst completion: 89.28 secs
+ 
+--> 
+
+
+Total memory usage is 555716 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  216 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

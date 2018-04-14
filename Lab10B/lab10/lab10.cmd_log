@@ -1,0 +1,83 @@
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 
+xst -intstyle ise -ifn "/users/misc/rharish/Lab10B/lab10/lab10.xst" -ofn "/users/misc/rharish/Lab10B/lab10/lab10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab10.ucf -p xc3s500e-fg320-4 lab10.ngc lab10.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o lab10_map.ncd lab10.ngd lab10.pcf 
+par -w -intstyle ise -ol high -t 1 lab10_map.ncd lab10.ncd lab10.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab10.twx lab10.ncd -o lab10.twr lab10.pcf -ucf lab10.ucf 
+bitgen -intstyle ise -f lab10.ut lab10.ncd 

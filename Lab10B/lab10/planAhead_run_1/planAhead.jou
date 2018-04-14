@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Apr 11 15:16:34 2018
+# Process ID: 20648
+# Log file: /users/misc/rharish/Lab10B/lab10/planAhead_run_1/planAhead.log
+# Journal file: /users/misc/rharish/Lab10B/lab10/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /users/misc/rharish/Lab10B/lab10/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property package_pin "" [get_ports [list  {leds[0]}]]
+set_property iostandard LVTTL [get_ports [list {leds[7]} {leds[6]} {leds[5]} {leds[4]} {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
+set_property drive 8 [get_ports [list {leds[7]} {leds[6]} {leds[5]} {leds[4]} {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
+startgroup
+set_property package_pin F12 [get_ports {leds[0]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {leds[1]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {leds[2]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {leds[3]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {leds[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {leds[5]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {leds[6]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {leds[7]}]
+endgroup
+set_property iostandard LVCMOS25 [get_ports [list clk]]
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+save_constraints

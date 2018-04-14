@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/users/misc/rharish/Lab10B/lab10/lab10.ncd
+OUTFILE=/users/misc/rharish/Lab10B/lab10/lab10.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/users/misc/rharish/Lab10B/lab10
+LICENSE=WebPack
+USER_INFO=211450758_0_0_676

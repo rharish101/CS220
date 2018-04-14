@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/users/misc/rharish/Lab10B/lab10/impact.xsl
+OUTFILE=/users/misc/rharish/Lab10B/lab10/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/users/misc/rharish/Lab10B/lab10
+LICENSE=iMPACT
+USER_INFO=iMPACT
